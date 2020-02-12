@@ -13,9 +13,9 @@ app.use(express.json());
 app.post('/api/products', controller.create)
 app.get('/api/products/:id', controller.getOne)
 app.get('/api/products', controller.getAll)
-app.update('/api/products/:id', controller.update)
+app.put('/api/products/:id', controller.update)
 app.delete('/api/products/:id', controller.delete)
 
 app.listen(SERVER_PORT, () =>{
     console.log(`I am listening on port ${SERVER_PORT}`)
-}).catch(err => console.log(err));
+})
